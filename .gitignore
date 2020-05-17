@@ -103,6 +103,7 @@ celerybeat-schedule
 .venv
 env/
 venv/
+turorial-env/
 ENV/
 env.bak/
 venv.bak/
