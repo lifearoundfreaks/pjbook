@@ -1,14 +1,14 @@
 from django.db import models
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
-from .manager import CategoryManager, SubCategoryManager, ProjectManager
+from .manager import Manager
 
 
 class Category(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField()
 
-    objects = CategoryManager()
+    objects = Manager()
 
     class Meta:
         verbose_name_plural = "categories"
@@ -22,7 +22,7 @@ class SubCategory(models.Model):
     slug = models.SlugField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
-    objects = SubCategoryManager()
+    objects = Manager()
 
     class Meta:
         verbose_name_plural = "subcategories"
@@ -38,7 +38,7 @@ class Project(models.Model):
                                  on_delete=models.CASCADE)
     subcategory = models.ManyToManyField(SubCategory)
 
-    objects = ProjectManager()
+    objects = Manager()
 
     class Meta:
         verbose_name_plural = "projects"

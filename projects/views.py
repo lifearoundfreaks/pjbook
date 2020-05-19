@@ -1,20 +1,26 @@
-from django.shortcuts import render
 from .models import Project, SubCategory, Category
+from django.views.generic import TemplateView
+from django.views.generic.detail import DetailView
 
 
-def my_view(request):
-    context = {
-        'categories': Category.objects.all(),
-        'subcategories': SubCategory.objects.all(),
-        'projects': Project.objects.all()
-    }
-    return render(request, '', context=context)
+class ProjectView(TemplateView):
+
+    template_name = "product.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categories"] = Category.objects.all()
+        context["subcategories"] = SubCategory.objects.all()
+        context["projects"] = Project.objects.all()
+        return context
 
 
-def filter_category(request, category_id):
-    context = {
-        'categories': Category.objects.all(),
-        'subcategories': SubCategory.objects.all(),
-        'projects': Project.objects.get_category_id(category_id)
-    }
-    return render(request, '', context=context)
+class DetailCategory(DetailView):
+    model = Category
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categories"] = Category.objects.all()
+        context["projects"] = self.get_object()
+        context["subcategories"] = SubCategory.objects.all()
+        return context
