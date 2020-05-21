@@ -1,0 +1,16 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %} 
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <form method="post" class="mb-4" style="margin-left:130px">
+        {% csrf_token %}
+            {% include 'layout/form.html' %}
+            <button type="submit" class="btn btn-success">Save changes</button> 
+        </form>
+    </main>
+
+
+
+{% endblock %} 
