@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     *CUSTOM_APPS,
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,3 +136,13 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+def show_toolbar(request):
+    return DEBUG
+
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar
+}
