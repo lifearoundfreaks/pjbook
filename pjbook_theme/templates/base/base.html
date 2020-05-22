@@ -20,13 +20,19 @@
         {% include 'base/navbar.html' %}
     </header>
 
-    {% include 'base/sidebar.html' %}
+    {% block sidebar %}
+        {% include 'base/sidebar.html' %}
+    {% endblock sidebar %}
+
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 content" >
         {% block content %}
 
         {% endblock content %}
     </main>
+    {% block registration %}
+
+    {% endblock %}
     <footer>
         <hr>
     </footer>

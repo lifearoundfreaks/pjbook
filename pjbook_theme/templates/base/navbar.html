@@ -12,14 +12,18 @@
             </li>
             {% if not user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Регистрация</a>
+                    <a class="nav-link" href="{% url 'registration' %}"> Регистрация</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Вход</a>
+                    <a class="nav-link" href="{% url 'sign_in' %}"> Вход</a>
                 </li>
             {% else %}
-                <li class="nav-item"><a href="#">Профиль</a></li>
-                <li class="nav-item"><a href="#">Выйти</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Профиль</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sign_out' %}">Выход</a>
+                </li>
             {% endif %}
         </ul>
     </div>
