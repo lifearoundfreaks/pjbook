@@ -17,7 +17,7 @@ class ChatView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         id = self.request.session.get('_auth_user_id')
-
+        context["title"] = "Главная"
         context["rooms"] = Room.objects.get_public()
         context["now"] = timezone.now()
         context["id_user"] = id
