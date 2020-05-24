@@ -30,6 +30,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Insert custom apps which you wish to be autorouted here
+AUTOROUTED_APPS = {}
+
+CUSTOM_APPS = [
+    'pjbook_theme',
+    *AUTOROUTED_APPS,
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    *CUSTOM_APPS,
 ]
 
 MIDDLEWARE = [
