@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
+    'chat',
+    'channels',
+    'widget_tweaks',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -69,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pjbook.wsgi.application'
-
+ASGI_APPLICATION = "pjbook.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

@@ -1,14 +1,10 @@
 from django.db import models
-from django.utils.text import slugify
-from django.db.models.signals import pre_save
 from .manager import Manager
 
 
 class Category(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField()
-
-    objects = Manager()
 
     class Meta:
         verbose_name_plural = "categories"
@@ -17,12 +13,10 @@ class Category(models.Model):
         return self.name
 
 
-class SubCategory(models.Model):
+class Subcategory(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
-    objects = Manager()
 
     class Meta:
         verbose_name_plural = "subcategories"
@@ -36,7 +30,7 @@ class Project(models.Model):
     slug = models.SlugField()
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.CASCADE)
-    subcategory = models.ManyToManyField(SubCategory)
+    subcategory = models.ManyToManyField(Subcategory)
 
     objects = Manager()
 
@@ -45,23 +39,3 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
-
-
-def save_slug_category(sender, instance, *args, **kwargs):
-    if instance.name and not instance.slug:
-        instance.slug = slugify(instance.name)
-
-
-def save_slug_subcategory(sender, instance, *args, **kwargs):
-    if instance.name and not instance.slug:
-        instance.slug = slugify(instance.name)
-
-
-def save_slug_project(sender, instance, *args, **kwargs):
-    if instance.name and not instance.slug:
-        instance.slug = slugify(instance.name)
-
-
-pre_save.connect(save_slug_category, sender=Category)
-pre_save.connect(save_slug_subcategory, sender=SubCategory)
-pre_save.connect(save_slug_project, sender=Project)

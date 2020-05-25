@@ -10,8 +10,7 @@ class ProjectView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
-        context["subcategories"] = SubCategory.objects.all()
-        context["projects"] = Project.objects.all()
+        context["subcategories"] = SubCategory.objects.all() 
         return context
 
 
@@ -21,6 +20,5 @@ class DetailCategory(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
-        context["projects"] = self.get_object()
         context["subcategories"] = SubCategory.objects.all()
         return context
