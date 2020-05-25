@@ -17,7 +17,7 @@ class Category(models.Model):
         return self.name
 
 
-class SubCategory(models.Model):
+class Subcategory(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -36,7 +36,7 @@ class Project(models.Model):
     slug = models.SlugField()
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.CASCADE)
-    subcategory = models.ManyToManyField(SubCategory)
+    subcategory = models.ManyToManyField(Subcategory)
 
     objects = Manager()
 
@@ -63,5 +63,5 @@ def save_slug_project(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(save_slug_category, sender=Category)
-pre_save.connect(save_slug_subcategory, sender=SubCategory)
+pre_save.connect(save_slug_subcategory, sender=Subcategory)
 pre_save.connect(save_slug_project, sender=Project)
