@@ -16,7 +16,7 @@
             </li>
             {% if not user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Регистрация</a>
+                    <a class="nav-link" href="{% url 'registration' %}"> Регистрация</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'sign_in' %}"> Вход</a>

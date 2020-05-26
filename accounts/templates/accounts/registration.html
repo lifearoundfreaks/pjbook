@@ -2,32 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign in</title>
+    <title>Registration</title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
           id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="span4 offset4 well">
-            <legend>Вход</legend>
-            <legend>Авторизация</legend>
+            <legend>Регистрация</legend>
             {% if form.errors %}
-                <div class="alert alert-error">
-                    {{ form.non_field_errors }}
+                <div class="alert alert-error registration">
+                    {{ form.errors }}
                 </div>
             {% endif %}
 
-            <form method="POST" action="{% url 'sign_in' %}" accept-charset="UTF-8">
+            <form method="POST" action="" accept-charset="UTF-8">
                 {% csrf_token %}
-                {{ form.username.label_tag }}
-                {{ form.username }}
+                {% for field in form %}
+                    {{ field.label_tag }}
+                    {{ field }}
+                {% endfor %}
 
-                {{ form.password.label_tag }}
-                {{ form.password }}
-                <button type="submit" name="submit" class="btn btn-info btn-block">Войти</button>
+                <button type="submit" name="submit" class="btn btn-info btn-block login_btn">Зарегистрироваться</button>
             </form>
             <a href="/" class="btn btn-info btn-block">Отмена</a>
         </div>
