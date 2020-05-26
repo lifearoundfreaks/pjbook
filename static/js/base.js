@@ -11,8 +11,7 @@ function rooms(type){
         success: function (data) {
             $("body").html(data)
         },
-        error: function (xhr, status, e) {
-            console.log(status);
+        error: function (xhr, status, e) { 
         },
         dataType: '',
      })
@@ -31,7 +30,8 @@ function join(id_room){
             $("body").html(data)
         },
         error: function (xhr, status, e) {
-            console.log(status);
+            
         },
         dataType: '',
      })
+}

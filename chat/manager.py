@@ -7,17 +7,8 @@ class RoomQuerySet(models.QuerySet):
     def get_public(self):
         return self.filter(type_room='public')
 
-    def get_myroom(self, author):
-        return self.filter(author=author)
-
-    def get_slug(self, slug):
+    def get_by_slug(self, slug):
         return self.filter(slug=slug)
-
-    def get_name(self, name):
-        return self.filter(name=name)
-
-    def get_id(self, id):
-        return self.filter(id=id)
 
 
 class RoomManager(models.Manager):
@@ -28,17 +19,8 @@ class RoomManager(models.Manager):
     def get_public(self):
         return self.queryset().get_public()
 
-    def get_myroom(self, author):
-        return self.queryset().get_myroom(author)
-
-    def get_slug(self, slug):
-        return self.queryset().get_slug(slug)
-
-    def get_name(self, name):
-        return self.queryset().get_name(name)
-
-    def get_id(self, id):
-        return self.queryset().get_id(id)
+    def get_by_slug(self, slug):
+        return self.queryset().get_by_slug(slug)
 
 
 class MembersRoomQuerySet(models.QuerySet):
@@ -61,12 +43,11 @@ class MembersRoomManager(models.Manager):
 
 class MessagesQuerySet(models.QuerySet):
 
-    def get_count(self, room_id, id_user):
-        obj = self.filter(room__id=room_id, read=False)
-        res = obj.filter(~Q(user_id=id_user))
-        return res.count()
+    def count_unread_messages_for_user(self, room_id, id_user):
+        return self.filter(~Q(user_id=id_user),
+                            room__id=room_id, read=False).count()
 
-    def read_msg(self, msg_id):
+    def filter_by_id(self, msg_id):
         return self.filter(id=msg_id)
 
 
@@ -75,10 +56,8 @@ class MessageManager(models.Manager):
     def queryset(self):
         return MessagesQuerySet(self.model, using=self._db)
 
-    def get_count(self, room_id, id_user):
-        return self.queryset().get_count(room_id, id_user)
+    def count_unread_messages_for_user(self, room_id, id_user):
+        return self.queryset().count_unread_messages_for_user(room_id, id_user)
 
-    def read_msg(self, msg_id):
-        return self.queryset().read_msg(msg_id)
-
- 
+    def filter_by_id(self, msg_id):
+        return self.queryset().filter_by_id(msg_id)

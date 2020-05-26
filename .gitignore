@@ -101,6 +101,8 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.vscode
+vscode/
 env/
 venv/
 ENV/
