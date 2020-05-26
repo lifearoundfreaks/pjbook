@@ -32,12 +32,20 @@ ALLOWED_HOSTS = []
 # Insert custom apps which you wish to be autorouted here
 AUTOROUTED_APPS = {}
 
-CUSTOM_APPS = [ 
+CUSTOM_APPS = [
     'projects',
     'chat',
     'channels',
     'widget_tweaks',
     'accounts',
+    *AUTOROUTED_APPS,
+]
+
+# Insert custom apps which you wish to be autorouted here
+AUTOROUTED_APPS = {}
+
+CUSTOM_APPS = [
+    'pjbook_theme',
     *AUTOROUTED_APPS,
 ]
 
