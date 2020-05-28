@@ -1,8 +1,7 @@
 from django.urls import path
-from .views import DetailCategory, ProjectView
+from .views import DetailCategory
 
 
-urlpatterns = [
-    path('', ProjectView.as_view(), name='home'),
+urlpatterns = [ 
     path('projects/<slug>', DetailCategory.as_view(), name='detail_category')
 ]
