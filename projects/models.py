@@ -4,7 +4,7 @@ from .manager import Manager
 
 class Category(models.Model):
     name = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name_plural = "categories"
@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     name = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
