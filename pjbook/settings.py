@@ -35,10 +35,6 @@ AUTOROUTED_APPS = {}
 CUSTOM_APPS = [
     'pjbook_theme',
     'projects',
-    'chat',
-    'channels',
-    'widget_tweaks',
-    'accounts',
     *AUTOROUTED_APPS,
 ]
 
