@@ -80,8 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pjbook.wsgi.application'
-ASGI_APPLICATION = "pjbook.routing.application"
+WSGI_APPLICATION = 'pjbook.wsgi.application' 
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
