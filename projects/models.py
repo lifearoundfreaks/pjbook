@@ -1,10 +1,10 @@
 from django.db import models
-from .manager import Manager
+from .manager import ProjectManager
 
 
 class Category(models.Model):
     name = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name_plural = "categories"
@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     name = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
@@ -27,12 +27,12 @@ class Subcategory(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.CASCADE)
     subcategory = models.ManyToManyField(Subcategory)
 
-    objects = Manager()
+    objects = ProjectManager()
 
     class Meta:
         verbose_name_plural = "projects"

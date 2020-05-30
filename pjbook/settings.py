@@ -34,10 +34,6 @@ AUTOROUTED_APPS = {}
 
 CUSTOM_APPS = [
     'projects',
-    'chat',
-    'channels',
-    'widget_tweaks',
-    'accounts',
     *AUTOROUTED_APPS,
 ]
 
@@ -87,8 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pjbook.wsgi.application'
-ASGI_APPLICATION = "pjbook.routing.application"
+WSGI_APPLICATION = 'pjbook.wsgi.application' 
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
