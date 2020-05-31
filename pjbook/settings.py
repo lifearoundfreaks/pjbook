@@ -29,12 +29,12 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 # Insert custom apps which you wish to be autorouted here
 AUTOROUTED_APPS = {}
 
 CUSTOM_APPS = [
     'pjbook_theme',
+    'projects',
     *AUTOROUTED_APPS,
 ]
 
@@ -78,8 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pjbook.wsgi.application'
-
+WSGI_APPLICATION = 'pjbook.wsgi.application' 
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
