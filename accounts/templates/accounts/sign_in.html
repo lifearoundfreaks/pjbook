@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign in</title>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
-          id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="span4 offset4 well">
-            <legend>Авторизация</legend>
-            {% if form.errors %}
-                <div class="alert alert-error">
-                    {{ form.non_field_errors }}
+{% extends 'base/base.html' %}
+{% load bootstrap3 %}
+{% block sidebar %}
+{% endblock %}
+
+
+{% block registration %}
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" class="text-center border border-light p-5" action="{% url 'sign_in' %}">
+                            {% csrf_token %}
+                            <p class="h4 mb-4">Sign in</p>
+                            {% if form.errors %}
+                                {% bootstrap_form_errors form layout='inline' %}
+                            {% endif %}
+                            {% bootstrap_form form layout='inline' %}
+                            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                        </form>
+                    </div>
                 </div>
-            {% endif %}
-
-            <form method="POST" action="{% url 'sign_in' %}" accept-charset="UTF-8">
-                {% csrf_token %}
-                {{ form.username.label_tag }}
-                {{ form.username }}
-
-                {{ form.password.label_tag }}
-                {{ form.password }}
-                <button type="submit" name="submit" class="btn btn-info btn-block">Войти</button>
-            </form>
-            <a href="/" class="btn btn-info btn-block">Отмена</a>
+            </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+{% endblock %}
+
