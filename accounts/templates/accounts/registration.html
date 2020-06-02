@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% load bootstrap3 %}
+{% block sidebar %}
+{% endblock %}
+
+{% block registration %}
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" class="text-center border border-light p-5" action="{% url 'registration' %}">
+                            {% csrf_token %}
+                            <p class="h4 mb-4">Registration</p>
+                            {% if form.errors %}
+                                {% bootstrap_form_errors form layout='inline' %}
+                            {% endif %}
+                            {% bootstrap_form form layout='inline' %}
+                            <button class="btn btn-info btn-block my-4" type="submit">Registration</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
