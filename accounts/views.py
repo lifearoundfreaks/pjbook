@@ -1,7 +1,8 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse
-from django.views.generic import FormView
+from django.views.generic import FormView, DetailView
 from accounts.forms import CreateUserForm
+from accounts.models import UserProfile
 
 
 class SignInView(LoginView):
@@ -29,3 +30,7 @@ class RegistrationView(FormView):
     def form_invalid(self, form):
         return super(RegistrationView, self).form_invalid(form)
 
+
+class ProfileView(DetailView):
+    model = UserProfile
+    template_name = 'accounts/profile.html'

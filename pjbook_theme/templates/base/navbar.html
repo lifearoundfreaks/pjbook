@@ -19,7 +19,7 @@
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Профиль</a>
+                    <a class="nav-link" href="{% url 'profile' user.id %}">Профиль</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'sign_out' %}">Выход</a>
