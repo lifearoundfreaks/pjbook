@@ -15,6 +15,7 @@ downloads/
 eggs/
 .eggs/
 .idea/
+.vscode/
 lib/
 lib64/
 parts/
@@ -126,4 +127,4 @@ dmypy.json
 .pyre/
 
 # Other stuff
-runserver.bat
+*.bat

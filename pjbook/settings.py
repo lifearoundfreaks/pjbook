@@ -35,6 +35,7 @@ AUTOROUTED_APPS = {}
 CUSTOM_APPS = [
     'pjbook_theme',
     'projects',
+    'accounts',
     *AUTOROUTED_APPS,
 ]
 
@@ -48,7 +49,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'bootstrap3',
     *CUSTOM_APPS,
-    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +147,5 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
     'SHOW_TOOLBAR_CALLBACK': show_toolbar
 }
+
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = "home"
