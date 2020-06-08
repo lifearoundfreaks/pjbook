@@ -25,11 +25,11 @@ class RoomManager(models.Manager):
 
 class MembersRoomQuerySet(models.QuerySet):
 
-    def get_member_room(self, user, room): 
-        return self.filter(user=user, room=room).exists() == True
-    
-    def get_member_not_author(self, author, room):
-        return self.filter(~Q(user=author), room=room)
+    def get_member_room(self, user, room):
+        obj = self.filter(user=user, room=room)
+        if obj.exists():
+            return True
+        return False
 
 
 class MembersRoomManager(models.Manager):
@@ -39,9 +39,6 @@ class MembersRoomManager(models.Manager):
 
     def get_member_room(self, user, room):
         return self.queryset().get_member_room(user, room)
-
-    def get_member_not_author(self, author, room):
-        return self.queryset().get_member_not_author(author, room)
 
 
 class MessagesQuerySet(models.QuerySet):

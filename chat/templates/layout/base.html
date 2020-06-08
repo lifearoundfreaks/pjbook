@@ -29,10 +29,14 @@
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'home' %}">Chat room</a>  
 </nav> 
-  </header> 
+  </header>
+
+  <main role="main">
     {% block content %}
 
-    {% endblock content %} 
+    {% endblock content %}
+  </main>
+
   <footer class="container">
     {% include 'layout/footer.html' %}  
   </footer>

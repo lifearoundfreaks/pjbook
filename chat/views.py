@@ -78,9 +78,9 @@ def rooms(request):
 class MembersRoomView(View):
 
     def get(self, request, *args, **kwargs):
-        slug = request.GET.get('slug')
-        id = self.request.session.get('_auth_user_id') 
-        room = Room.objects.get_by_slug(slug)[0] 
+        id_room = request.GET.get('id_room')
+        id = self.request.session.get('_auth_user_id')
+        room = Room.objects.get_id(id_room)[0]
         user = User.objects.get(id=id)
         context = {}
         is_member = MembersRoom.objects.get_member_room(user, room)

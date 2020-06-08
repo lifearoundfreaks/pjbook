@@ -16,14 +16,14 @@ function rooms(type){
      })
 }
 
-function join(slug){
+function join(id_room){
     $.ajax({
         type: 'GET',
         async: true,
         url: "join/",
         data: {
             ajax: true,
-            slug: slug
+            id_room: id_room
         },
         success: function (data) {
             $("body").html(data)
