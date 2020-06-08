@@ -47,7 +47,8 @@ class CategoryView(ProjectListView):
         return queryset
 
     def get_context_data(self, *args, object_list=None, **kwargs):
+        slug = self.kwargs.get('slug')
         return super().get_context_data(
-            *args,
-            category=Category.objects.get(slug=self.kwargs['slug']),
-            subcategories=Subcategory.objects.all(), **kwargs)
+            *args, category=Category.objects.get(slug=slug),
+            subcategories=Subcategory.objects.filter(category__slug=slug),
+            **kwargs)
