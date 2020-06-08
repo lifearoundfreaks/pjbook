@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+
 # Insert custom apps which you wish to be autorouted here
 AUTOROUTED_APPS = {}
 
@@ -84,7 +85,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pjbook.wsgi.application'
-ASGI_APPLICATION = "pjbook.routing.application"
+
 
 CHANNEL_LAYERS = {
     'default': {

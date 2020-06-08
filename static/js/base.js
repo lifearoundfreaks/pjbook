@@ -1,5 +1,4 @@
-function rooms(type){ 
-    // console.log(window.location.href)
+function rooms(type){  
      $.ajax({
         type: 'GET',
         async: true,
