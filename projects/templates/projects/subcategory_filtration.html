@@ -1,0 +1,16 @@
+<div>
+    <form method="post" action="{% url 'category' category.slug %}" onsubmit="filterBySubcategories(this)">
+        {% csrf_token %}
+        {% for subcategory in subcategories %}
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="sub_slug" value="{{ subcategory.slug }}">
+                <label class="form-check-label">{{ subcategory.name }}</label>
+            </div>
+        {% endfor %}
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="all_subs">
+            <label class="form-check-label">Проект содержит все перечисленные категории</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Отфильтровать</button>
+    </form>
+</div>

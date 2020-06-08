@@ -1,0 +1,12 @@
+<ul>
+    {% for project in projects %}
+        <li class="card" style="margin-top: 20px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text">Просмотрено: {{ project.views }}</p>
+                <a href="{% url 'project' project.slug %}" class="card-link">Просмотр</a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
