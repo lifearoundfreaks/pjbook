@@ -89,8 +89,10 @@ WSGI_APPLICATION = 'pjbook.wsgi.application'
 
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'asgi_redis.RedisChannelLayer',
-        # "ROUTING": "pjbook.routing.channel_routing",
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
     },
 }
 

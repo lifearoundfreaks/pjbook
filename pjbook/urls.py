@@ -21,6 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('pjbook_theme.urls')),
     path('chat/', include('chat.urls')),
     path('account/', include('accounts.urls'))
 ]

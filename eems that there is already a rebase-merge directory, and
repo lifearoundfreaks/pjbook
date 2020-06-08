@@ -1,0 +1,427 @@
+[33mcommit 3289b876186de54eb01399e1d8e0c033374ba475[m[33m ([m[1;36mHEAD -> [m[1;32mrm_chat[m[33m)[m
+Author: rustamrv <rystmarv@gmail.com>
+Date:   Mon Jun 8 20:06:08 2020 +0300
+
+    Revert "Add app chat"
+    
+    This reverts commit 5e5f7833187f764dd997787b2fdc0a47260f6393.
+
+[33mcommit d64acafa8e81f5f62621bdf91356be6e2273d2e8[m[33m ([m[1;31morigin/rm_chat[m[33m)[m
+Author: rustamrv <rystmarv@gmail.com>
+Date:   Mon Jun 8 20:04:12 2020 +0300
+
+    Add app chat
+
+[33mcommit 5e5f7833187f764dd997787b2fdc0a47260f6393[m
+Author: rustamrv <rystmarv@gmail.com>
+Date:   Mon Jun 8 19:38:27 2020 +0300
+
+    Add app chat
+
+[33mcommit 13004fea80e0149f84098cf48cc5d54f4cc02324[m
+Merge: 96c29b4 599ae35
+Author: rustamrv <rystmarv@gmail.com>
+Date:   Mon Jun 8 13:59:51 2020 +0300
+
+    update
+
+[33mcommit 96c29b4a7401231900a813de0d17da796b328c96[m
+Author: rustamrv <rystmarv@gmail.com>
+Date:   Mon Jun 8 13:56:21 2020 +0300
+
+    update
+
+[33mcommit 9e19baf3bc95ae65d09654e2059253c831bc908a[m[33m ([m[1;32mrm_category[m[33m)[m
+Merge: 7bde6ab 4155b0a
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon Jun 8 11:32:42 2020 +0300
+
+    fixed app
+
+[33mcommit 7bde6ab8dd44db5ed7d66945ab3da6d247b62084[m
+Merge: bb1b2c3 d1f80e9
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon Jun 8 11:26:10 2020 +0300
+
+    fixed app
+
+[33mcommit 599ae35bf6eeda57244f7dde962e418e8e3250ee[m
+Merge: 942aeeb a513c88
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun Jun 7 16:54:44 2020 +0300
+
+    Merge branch 'develop' of https://github.com/lifearoundfreaks/pjbook into develop
+
+[33mcommit 942aeeb316f45a8583a6197f477ff5d81b9294bc[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun Jun 7 16:54:40 2020 +0300
+
+    Fixed bootstrap error
+
+[33mcommit a513c88c40174e7197a32b6d3ce43e6bceed257d[m
+Merge: 0e18a14 cf2a06c
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun Jun 7 16:30:08 2020 +0300
+
+    Merge pull request #16 from lifearoundfreaks/dependabot/pip/django-3.0.7
+    
+    Bump django from 3.0.6 to 3.0.7
+
+[33mcommit 0e18a1475b0033b504d8f8bae41912bf096dbc98[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun Jun 7 16:23:56 2020 +0300
+
+    Added favicon and global static
+
+[33mcommit cf2a06c278e3b72f7b6ca83a5248a924c9ac8f17[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Jun 6 17:35:39 2020 +0000
+
+    Bump django from 3.0.6 to 3.0.7
+    
+    Bumps [django](https://github.com/django/django) from 3.0.6 to 3.0.7.
+    - [Release notes](https://github.com/django/django/releases)
+    - [Commits](https://github.com/django/django/compare/3.0.6...3.0.7)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit d1f80e981c7f309b78e55b6b2f726b9cc2876654[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sat Jun 6 20:34:23 2020 +0300
+
+    Various tweaks for accounts app
+
+[33mcommit a5c72371fcc6cfa6bde4312ccf87b4621ff1806b[m
+Merge: 9a4aea8 c03346a
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Tue Jun 2 21:52:42 2020 +0300
+
+    Merge pull request #12 from lifearoundfreaks/vitalii/user_registration_and_login_authentication
+    
+    registration, login, logout
+
+[33mcommit c03346a063129350ecf02b9c5caf6846e16f8a16[m[33m ([m[1;31morigin/vitalii/user_registration_and_login_authentication[m[33m)[m
+Author: ZefRi19 <vitaliy.kucherenko1219@gmail.com>
+Date:   Mon Jun 1 21:31:31 2020 +0300
+
+    Регистрация, авторизация
+
+[33mcommit b203b85402352cff5527cde58353177eb8c6542b[m
+Author: ZefRi19 <vitaliy.kucherenko1219@gmail.com>
+Date:   Fri May 22 23:22:28 2020 +0300
+
+    registration, login, logout
+
+[33mcommit 9a4aea870acc1a41f7ba8d68279a31f903ec1270[m
+Merge: 2a11723 65caaae
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 31 15:45:16 2020 +0300
+
+    Merge pull request #13 from lifearoundfreaks/rm_category
+    
+    Rm category
+
+[33mcommit 65caaae227b283c92337587cf3edfff9e415ea0d[m[33m ([m[1;31morigin/rm_category[m[33m)[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon May 18 09:44:14 2020 +0300
+
+    Added projects app.
+
+[33mcommit bb1b2c3ac0707a406f2c85bdd3e68a963ae3e3b2[m
+Merge: c569ed9 7d40d10
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 30 16:47:09 2020 +0300
+
+    Added projects applications
+
+[33mcommit 7d40d10ac002ac05c3c8ad3fa75cfa936c579657[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 30 14:22:46 2020 +0300
+
+    added projects application
+
+[33mcommit 56f2dba5510e6be478949b3b97634973a952b00b[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 30 14:10:48 2020 +0300
+
+    update
+
+[33mcommit f7e24ae96be9769aff82905e153e7c8182c6accf[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 30 14:05:24 2020 +0300
+
+    uodate
+
+[33mcommit 4155b0a0d6399136b815c36e955ff3cdedd36867[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 30 13:57:21 2020 +0300
+
+    update
+
+[33mcommit 2a11723875c4ef8006b61d1f19da69b536aea43f[m
+Merge: 7a31781 4cbf9c3
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Fri May 29 22:38:02 2020 +0300
+
+    Merge pull request #10 from lifearoundfreaks/vitalii/fix_html
+    
+    Подправил малеха верстку
+
+[33mcommit 1cd3e820a1723c1023d4bb0d62ea1dbb60bd0083[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Fri May 29 21:02:29 2020 +0300
+
+    fixed manager file and setting file
+
+[33mcommit a4b149fd43281e0dc3a1401e8f1cda8ea928e7dd[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Fri May 29 20:59:34 2020 +0300
+
+    fixed manager file and setting file
+
+[33mcommit 4cbf9c371a6c81d5e0f549c5325255a963b71229[m[33m ([m[1;31morigin/vitalii/fix_html[m[33m)[m
+Author: vitalii.kucherenko <vitalii.kucherenko@raccoongang.com>
+Date:   Thu May 21 20:39:43 2020 +0300
+
+    Подправил малеха верстку
+
+[33mcommit f81c4d0e4b6e237ac17a4b32b5f6f18a44722a47[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Fri May 29 20:54:48 2020 +0300
+
+    update
+
+[33mcommit 6e2f7f42b15f74e9d1bd88b3d9cddcd625ae0835[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Fri May 29 20:39:07 2020 +0300
+
+    fixed
+
+[33mcommit 7a3178148d3f534575a24184a612b20df3b5cf3b[m
+Merge: 4bb2f53 2f8d09f
+Author: Vitaliy <64917136+ZefRi19@users.noreply.github.com>
+Date:   Thu May 28 22:04:53 2020 +0300
+
+    Merge pull request #9 from lifearoundfreaks/vitalii/add_toolbar
+    
+    Toolbar
+
+[33mcommit 2f8d09ffd6d95585cea8696f06a9120f8543a43a[m[33m ([m[1;31morigin/vitalii/add_toolbar[m[33m)[m
+Author: vitalii.kucherenko <vitalii.kucherenko@raccoongang.com>
+Date:   Thu May 21 19:48:25 2020 +0300
+
+    Toolbar
+
+[33mcommit 5b95de174aa72728713503ac50a18e180bbc053d[m
+Merge: 2a066dd 4bb2f53
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Thu May 28 18:58:58 2020 +0300
+
+    update
+
+[33mcommit 2a066dd8b76065accf17c910c36c6a274bc58450[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Thu May 28 18:46:25 2020 +0300
+
+    update
+
+[33mcommit c569ed95134133ae448948b982cb2bc6f84a289f[m
+Merge: ba6648e 98aa7f4
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 26 20:34:46 2020 +0300
+
+    pull login_auth
+
+[33mcommit ba6648e88c7ca73136086d828d505795c330821b[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 26 20:30:56 2020 +0300
+
+    pull pjbook
+
+[33mcommit da21fb7f2930a55d8bc629d1924d953ad65305e9[m
+Merge: 2d8afb5 7002da8
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 26 20:26:34 2020 +0300
+
+    fixed rm_chat
+
+[33mcommit 2d8afb5bc124d5b8d0a8d62da7c53318c8661828[m
+Merge: 0a7999d 59235b7
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 26 20:22:45 2020 +0300
+
+    fixed rm_chat
+
+[33mcommit 59235b7bf433dce1cb9a2651673a28074501e3ca[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 26 20:04:05 2020 +0300
+
+    fixed category setting
+
+[33mcommit fc99919c644b1e2c66601c68c0e43ac1759f6224[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon May 25 22:57:29 2020 +0300
+
+    fixed rm_category
+
+[33mcommit 806b8eaaf4a94f8894e4188ca9703df6fd944432[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon May 25 22:16:34 2020 +0300
+
+    fixed rm_category
+
+[33mcommit 4bb2f534075c636484a6d1a138b17b13bee799c8[m
+Merge: 94b162e 7002da8
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 24 15:00:30 2020 +0300
+
+    Merge pull request #7 from lifearoundfreaks/pjbook_theme_application_created
+    
+    Created pjbook theme app
+
+[33mcommit 7002da8e0c9da43550b33049af00952478cdf76e[m[33m ([m[1;31morigin/pjbook_theme_application_created[m[33m)[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 24 14:58:34 2020 +0300
+
+    pjbook_theme app. Fixed a mistake.
+
+[33mcommit 98aa7f4dd429b7449a94b4216f8ca308d8435d8b[m
+Author: ZefRi19 <vitaliy.kucherenko1219@gmail.com>
+Date:   Fri May 22 23:22:28 2020 +0300
+
+    registration, login, logout
+
+[33mcommit 0a7999d66761e8e4aa4886aa07af4ec1e7d947b2[m
+Merge: 07649ce 76dcaf5
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sat May 23 17:05:27 2020 +0300
+
+    update
+
+[33mcommit 76dcaf527de90f338725980c5cfa63e35bffbd52[m
+Author: ZefRi19 <vitaliy.kucherenko1219@gmail.com>
+Date:   Fri May 22 23:22:28 2020 +0300
+
+    registration, login, logout
+
+[33mcommit 07649cee7253a30772a87cfae13c1810d53dc33a[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Thu May 21 21:49:13 2020 +0300
+
+    add app chat
+
+[33mcommit e60cbe66e1485f8dd0d23bcd1e0a82ea4100fa59[m[33m ([m[1;31morigin/rm_develop[m[33m)[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Tue May 19 21:24:56 2020 +0300
+
+    rm/update projects
+
+[33mcommit c1794d39d6c637a4451fa6dbd5c02f82c9996bc5[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Mon May 18 09:44:14 2020 +0300
+
+    rm/add app projects
+
+[33mcommit 14b0ee9af9157134e22b714727315207bdb8cbe0[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 17 23:26:51 2020 +0300
+
+    Created pjbook theme app
+
+[33mcommit 94b162e423f99d1442c5274d50d240bb9eeca080[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 17 21:59:27 2020 +0300
+
+    Revert "Add project"
+    
+    This reverts commit 944af9ba5960ba23254e5aa781dcc57d280d169b.
+
+[33mcommit 944af9ba5960ba23254e5aa781dcc57d280d169b[m
+Author: rustamrv <rystamrv@gmail.com>
+Date:   Sun May 17 21:24:45 2020 +0300
+
+    Add project
+
+[33mcommit d91750127dd539ed6c9eb5daac134b9d083937f4[m
+Merge: 3cd9d18 2b0dd87
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Sun May 17 19:25:32 2020 +0300
+
+    Merge pull request #5 from lifearoundfreaks/vitalii/base_html
+    
+    navbar, static
+
+[33mcommit 2b0dd871a2b34e0b3f4b658c2c7ea5b72d468452[m[33m ([m[1;31morigin/vitalii/base_html[m[33m)[m
+Author: vitalii.kucherenko <vitalii.kucherenko@raccoongang.com>
+Date:   Sat May 16 01:10:02 2020 +0300
+
+    discussion
+
+[33mcommit 3cd9d18d33961891e08091e6cf9676447277e912[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 23:46:02 2020 +0300
+
+    Created requirements.txt
+
+[33mcommit e699cd8c5913e43038f577e5b8e96a42c85db16d[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 23:27:00 2020 +0300
+
+    Clearing out pycharm stuff, updating gitignore
+
+[33mcommit 8d95abbee43b0fda105f3a77d2496130544bddee[m
+Merge: 9941253 a490296
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 22:36:32 2020 +0300
+
+    Merge pull request #3 from lifearoundfreaks/lili/test
+    
+    Test
+
+[33mcommit a490296a6281786bb2d06687c125bee8b1d5a5f8[m[33m ([m[1;31morigin/lili/test[m[33m)[m
+Author: Lili Rassh <lili.rassh@gmail.com>
+Date:   Thu May 14 22:32:12 2020 +0300
+
+    Test
+
+[33mcommit 9941253a2c9bc508f85a179ce6c436b495a5b0a2[m
+Merge: 68717c1 f127034
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 22:16:32 2020 +0300
+
+    Merge pull request #2 from lifearoundfreaks/rm_develop
+    
+    update readme
+
+[33mcommit 68717c1d897e26c9c9c5b5b5b5e44dedae2e7a97[m
+Merge: 3f49cc7 b111144
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 22:16:19 2020 +0300
+
+    Merge pull request #1 from lifearoundfreaks/vitalii/template
+    
+    test
+
+[33mcommit f12703462063ed0fad26569c1d5b6f19c9d4779c[m
+Author: rystamrv <rystamrv@gmail.com>
+Date:   Thu May 14 22:10:58 2020 +0300
+
+    update readme
+
+[33mcommit b11114417dbc3c14c58455785c4e60d320702f98[m[33m ([m[1;31morigin/vitalii/template[m[33m)[m
+Author: vitalii.kucherenko <vitalii.kucherenko@raccoongang.com>
+Date:   Thu May 14 22:10:56 2020 +0300
+
+    test
+
+[33mcommit 3f49cc73ac6ca39284137e8e67b3a5efed483e6b[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 21:34:55 2020 +0300
+
+    Created a raw django project
+
+[33mcommit 6697d92077b23296182bfa1e7ed2f56fd13b7c8f[m
+Author: lifearoundfreaks <42870020+lifearoundfreaks@users.noreply.github.com>
+Date:   Thu May 14 21:31:19 2020 +0300
+
+    Initial commit
