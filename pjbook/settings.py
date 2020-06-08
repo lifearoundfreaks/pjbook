@@ -85,7 +85,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pjbook.wsgi.application'
-
+ASGI_APPLICATION = "pjbook.routing.application"
 
 CHANNEL_LAYERS = {
     'default': {
