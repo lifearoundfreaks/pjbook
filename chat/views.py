@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import TemplateView, DetailView, CreateView
 from django.views.generic import DeleteView
 from .models import Room, Message, MembersRoom
 from django.utils import timezone
@@ -8,11 +8,9 @@ from django.urls import reverse_lazy
 from django.views import View
 
 
-class ChatView(ListView):
+class ChatView(TemplateView):
 
-    model = Room
-    paginete_by = 6
-    template = 'chat_list.html'
+    template_name = 'chat/chat_list.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -27,19 +25,19 @@ class ChatView(ListView):
 class ChatDetail(DetailView):
 
     model = Room
-    template = 'chat_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         obj = self.get_object()
         id = self.request.session.get('_auth_user_id')
-        user = User.objects.get_id(id)
+        user = User.objects.get(id=id)
         is_member = MembersRoom.objects.get_member_room(user, obj)
         context['messages'] = Message.objects.all().filter(room=obj)
         context['now'] = timezone.now()
         context["rooms"] = Room.objects.get_public()
         context["id_user"] = id
         context['is_member'] = is_member
+        context['title'] = obj.name
         return context
 
 
@@ -72,7 +70,7 @@ def rooms(request):
     if typ == 'all':
         context["rooms"] = Room.objects.get_public()
     else:
-        context["rooms"] = Room.objects.get_myroom(User.objects.get(id=id))
+        context["rooms"] = Room.objects.filter(author=User.objects.get(id=id))
 
     return render(request, "chat/chat_list.html", context)
 
@@ -83,7 +81,7 @@ class MembersRoomView(View):
         id_room = request.GET.get('id_room')
         id = self.request.session.get('_auth_user_id')
         room = Room.objects.get_id(id_room)[0]
-        user = User.objects.get_id(id)
+        user = User.objects.get(id=id)
         context = {}
         is_member = MembersRoom.objects.get_member_room(user, room)
         if not is_member:

@@ -33,15 +33,10 @@ ALLOWED_HOSTS = []
 AUTOROUTED_APPS = {}
 
 CUSTOM_APPS = [
-    'projects',
-    *AUTOROUTED_APPS,
-]
-
-# Insert custom apps which you wish to be autorouted here
-AUTOROUTED_APPS = {}
-
-CUSTOM_APPS = [
     'pjbook_theme',
+    'projects',
+    'accounts',
+    'chat',
     *AUTOROUTED_APPS,
 ]
 
@@ -52,10 +47,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
+    'widget_tweaks',
+    'bootstrap3',
+    'channels',
     *CUSTOM_APPS,
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -83,7 +83,15 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pjbook.wsgi.application' 
+WSGI_APPLICATION = 'pjbook.wsgi.application'
+ASGI_APPLICATION = "pjbook.routing.application"
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        # "ROUTING": "pjbook.routing.channel_routing",
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -140,3 +148,15 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+def show_toolbar(request):
+    return DEBUG
+
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar
+}
+
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = "home"

@@ -44,7 +44,7 @@ class MembersRoomManager(models.Manager):
 class MessagesQuerySet(models.QuerySet):
 
     def count_unread_messages_for_user(self, room_id, id_user):
-        return self.filter(~Q(user_id=id_user),
+        return self.filter(~Q(recipient_id=id_user),
                             room__id=room_id, read=False).count()
 
     def filter_by_id(self, msg_id):

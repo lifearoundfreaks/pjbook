@@ -22,7 +22,7 @@ def input_class(bound_field):
 
 @register.simple_tag
 def count_msg(room_id, id):
-    count = Message.objects.get_count(room_id, id)
+    count = Message.objects.count_unread_messages_for_user(room_id, id)
     return str(count)
 
 

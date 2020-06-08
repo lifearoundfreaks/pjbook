@@ -1,0 +1,122 @@
+.section-nav {
+    padding-left: 0;
+    border-left: 1px solid #eee;
+}
+
+.section-nav_room {
+    padding-left: 0;
+    border-left: 1px solid #eee;
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+} 
+
+.section-nav_msg {
+    padding-left: 0; 
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+} 
+
+ul.section-nav_room li {
+    display:inline-block;
+    border-bottom: 1px solid #eee;
+}
+ul.section-nav_msg li {
+    display:inline-block;  
+    margin-right: 40px;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.toc-entry a {
+    display: block;
+    padding: .125rem 1.5rem;
+    color:#99979c;
+}
+
+li{
+    list-style-type: none; /* Убираем маркеры */
+}
+.bd-toc {
+    font-size: .875rem;
+    margin-left: 80%;
+}
+.bd-links { 
+    display: block !important; 
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.bd-toc-link {
+    display: block;
+    padding: .25rem 1.5rem;
+    font-weight: 500;
+    color:rgba(0,0,0,.65);
+}
+
+.bd-toc-item{ 
+    margin-left: 20px;
+    margin-top: 10px; 
+    border-bottom: 1px solid #eee;
+}
+
+.bd-messeges{
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee; 
+    width: 60%;
+    height: 60%; 
+    position: fixed; 
+    overflow-x: auto; 
+}
+ 
+#bd-docs-nav{
+    border-right: 1px solid #eee;
+    position: fixed; 
+    /* overflow-x: auto;  */
+} 
+.send{  
+    /* position: absolute; */
+    margin-top: 60%;
+    display:block; 
+}
+
+#text{
+    width: 700px;
+    resize: none;
+}
+
+.input-group-append {
+    padding-left: 740px;
+    margin-top: -70px;
+}
+
+.message div{
+    display: table-cell; 
+    vertical-align: middle;
+    padding:10px; 
+}
+      
+.main_r{
+    margin-left: 15%;
+    /* margin: 13px; */
+}
+
+.auth{
+    margin-left: 1100px;
+    padding-top: 10px;
+}
+
+.main_msg{
+    display: inline-block;
+}
+
+.time{
+    padding-left: 730px;
+}
