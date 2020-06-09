@@ -1,0 +1,41 @@
+{
+    "categories": {
+        "programmirovanie": {
+            "name": "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435",
+            "subcategories": {
+                "clanguages": {
+                    "name": "C/C++/C#"
+                },
+                "python": {
+                    "name": "Python"
+                },
+                "java": {
+                    "name": "Java"
+                }
+            }
+        },
+        "kulinariya": {
+            "name": "\u041a\u0443\u043b\u0438\u043d\u0430\u0440\u0438\u044f",
+            "subcategories": {
+                "vegetarianskaya-kuhnya": {
+                    "name": "\u0412\u0435\u0433\u0435\u0442\u0430\u0440\u0438\u0430\u043d\u0441\u043a\u0430\u044f \u043a\u0443\u0445\u043d\u044f"
+                },
+                "ukrainskaya-kuhnya": {
+                    "name": "\u0423\u043a\u0440\u0430\u0438\u043d\u0441\u043a\u0430\u044f \u043a\u0443\u0445\u043d\u044f"
+                }
+            }
+        },
+        "rukodelie": {
+            "name": "\u0420\u0443\u043a\u043e\u0434\u0435\u043b\u0438\u0435",
+            "subcategories": {
+                "vyazanie": {
+                    "name": "\u0412\u044f\u0437\u0430\u043d\u0438\u0435"
+                },
+                "rezba-po-derevu": {
+                    "name": "\u0420\u0435\u0437\u044c\u0431\u0430 \u043f\u043e \u0434\u0435\u0440\u0435\u0432\u0443"
+                }
+            }
+        }
+    },
+    "version": 4
+}
