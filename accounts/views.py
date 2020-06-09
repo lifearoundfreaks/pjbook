@@ -1,9 +1,19 @@
+from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse
-from django.views.generic import FormView
+from django.views.generic import FormView, DetailView
 from accounts.forms import CreateUserForm
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from accounts.models import UserProfile
+
+
+class SignInView(LoginView):
+    template_name = 'accounts/sign_in.html'
+
+    def get_success_url(self):
+        return reverse('popular_projects')
+
+
+class SignOutView(LogoutView):
+    next_page = '/'
 
 
 class RegistrationView(FormView):
@@ -11,15 +21,16 @@ class RegistrationView(FormView):
     template_name = "accounts/registration.html"
 
     def get_success_url(self):
-        return reverse('home')
+        return reverse('sign_in')
 
-    def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST)
-        if form.is_valid():
-            new_user = form.save()
-            new_user = authenticate(username=form.cleaned_data['username'],
-                                    password=form.cleaned_data['password1'])
-            login(request, new_user)
-            return HttpResponseRedirect(self.get_success_url())
+    def form_valid(self, form):
+        form.save()
+        return super(RegistrationView, self).form_valid(form)
 
-        return render(request, self.template_name, {'form': form})
+    def form_invalid(self, form):
+        return super(RegistrationView, self).form_invalid(form)
+
+
+class ProfileView(DetailView):
+    model = UserProfile
+    template_name = 'accounts/profile.html'
