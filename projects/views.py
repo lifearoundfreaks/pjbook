@@ -1,5 +1,6 @@
 from django.views.generic import ListView, TemplateView
 from .models import Project, Category, Subcategory
+from django.db.models import Q
 
 
 class ProjectView(TemplateView):
@@ -52,3 +53,13 @@ class CategoryView(ProjectListView):
             *args, category=Category.objects.get(slug=slug),
             subcategories=Subcategory.objects.filter(category__slug=slug),
             **kwargs)
+
+
+class SiteSeachView(ProjectListView):
+    template_name = 'projects/search_results.html'
+
+    def get_queryset(self):
+        search_term = self.request.GET.get('term', '')
+        return super().get_queryset().filter(
+            Q(name__contains=search_term) |
+            Q(description__contains=search_term))
