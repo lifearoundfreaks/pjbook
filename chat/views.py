@@ -58,7 +58,7 @@ class ChatCreate(CreateView):
         if form.is_valid():
             form.instance.author = User.objects.get(id=id)
             self.object = form.save()
-            return redirect('home')
+            return redirect('chat')
 
 
 def rooms(request):
@@ -99,4 +99,4 @@ class MembersRoomView(View):
 
 class RoomDelete(DeleteView):
     model = Room
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('chat')
