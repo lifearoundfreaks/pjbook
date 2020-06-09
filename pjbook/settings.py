@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from .utils import setup_project
 
-setup_project()
+MIGRATION_REQUIRED = setup_project()
 
 from .private_settings import *
 

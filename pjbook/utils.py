@@ -48,6 +48,9 @@ def setup_project(force=False):
         with open(PRIVATE_SETTINGS_PATH, 'w') as _file:
             _file.write(TEMPLATE.format(**data))
 
+        return True
+    return False
+
 
 def setup_required():
     try:
