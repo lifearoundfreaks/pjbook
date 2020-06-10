@@ -1,0 +1,7 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h2 style="text-align: center;">Результаты поиска</h2>
+    {% include 'projects/project_list.html' %}
+    {% include 'base/pagination.html' %}
+{% endblock content %}
