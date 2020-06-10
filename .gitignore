@@ -128,3 +128,4 @@ dmypy.json
 
 # Other stuff
 *.bat
+private_settings.py
