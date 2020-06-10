@@ -1,4 +1,4 @@
-# This a Django study project
+# This is a simple Django study project
 
 > In this project we learn to work in a group and actively use VCS to develop a django application
 
