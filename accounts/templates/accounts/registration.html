@@ -13,7 +13,7 @@
                             {% csrf_token %}
                             <p class="h4 mb-4">Registration</p>
                             {% if form.errors %}
-                                {% bootstrap_form_errors form layout='inline' %}
+                                {% bootstrap_form_errors form layout='inline' error_types='field_errors' %}
                             {% endif %}
                             {% bootstrap_form form layout='inline' %}
                             <button class="btn btn-info btn-block my-4" type="submit">Registration</button>
