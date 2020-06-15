@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">PJBook</a>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav navbar-right">
+            <li>
+                <div class="search">
+                    <input type="text" class="form-control input-sm" maxlength="64" placeholder="Поиск"/>
+                    <button type="submit" class="btn btn-primary btn-sm">Поиск</button>
+                </div>
+            </li>
+            {% if not user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'registration' %}"> Регистрация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sign_in' %}"> Вход</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chat' %}">Чат</a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="{% url 'profile' user.id %}">Профиль</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sign_out' %}">Выход</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

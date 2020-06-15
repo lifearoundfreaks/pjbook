@@ -19,5 +19,5 @@ class SubcategoryAdmin(admin.ModelAdmin):
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', )
-    list_filter = ('name', 'category', 'subcategory', )
+    list_filter = ('name', 'category', 'subcategories', )
     prepopulated_fields = {"slug": ("name",)}
