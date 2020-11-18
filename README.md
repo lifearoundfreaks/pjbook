@@ -3,13 +3,19 @@
 > In this project we learn to work in a group and actively use VCS to develop a django application
 
 ---
+## Getting Started
+
+Project runs on Python 3.9 and Django 3.0.7
 
 ## Installation
 
 - Clone this repository to your machine
-- (Optional) Create a virtual python environment
-- Install requirements with `pip install -r requirements.txt`
-- Simply run a project with `./manage.py runserver`, you don't even need to run `migrate` since it will run during automatic setup
+- Install docker
+
+##Commands to launch
+
+* `docker-compose build` - build project from `docker-compose.yml`
+* `docker-compose up` - start project
 
 ### Automatic setup
 
